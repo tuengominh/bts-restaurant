@@ -11,7 +11,6 @@ import static java.lang.String.valueOf;
 
 public class SalesService implements OnlineOrderOps {
 
-    //TODO: get all Customer names
     //TODO: read & write CSV
 
     public int getNumberOrders(List orders) {
@@ -71,14 +70,13 @@ public class SalesService implements OnlineOrderOps {
 
     public double getStatsByCategory(List dishes, String category) {
         List<Object> dishesByCategory = getDishesByCategory(dishes, category);
-        double result = (dishesByCategory.size()/dishes.size()) * 100;
-        System.out.println(result + "% of orders are " + category);
-        return result;
+        double stats = (dishesByCategory.size()/dishes.size()) * 100;
+        System.out.println(stats + "% of orders are " + category);
+        return stats;
     }
 
     public double getStatsByCategoryAndCustomer(List dishes, Customer customer, String category) {
         List<Object> orderedDishesByCategory = getDishesByCategory(getDishesByCustomer(customer), category);
-
         double stats = orderedDishesByCategory.size() / customer.getAllOrders().size() * 100;
         System.out.println(stats + "% of orders from " + customer.getName() + " are " + category);
         return stats;
