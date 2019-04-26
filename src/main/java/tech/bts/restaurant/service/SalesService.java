@@ -16,8 +16,8 @@ import static java.lang.String.valueOf;
 public class SalesService implements OnlineOrderOps {
 
     //read sample CSV file and parse to Order objects
-    public List<Order> readOrders(String path) throws Exception {
-        List<Order> orders = new ArrayList<Order>();
+    public List readOrders(String path) throws Exception {
+        List orders = new ArrayList<Order>();
 
         BufferedReader reader = new BufferedReader(new FileReader(path));
         CSVReader csvReader = new CSVReaderBuilder(reader).withSkipLines(1).build();
@@ -52,11 +52,11 @@ public class SalesService implements OnlineOrderOps {
     }
 
     // update new order to CSV file
-    public void writeOrders(List<Order> orders, String path) throws Exception {
+    public void writeOrders(List orders, String path) throws Exception {
         CSVWriter writer = new CSVWriter(new FileWriter(path, true));
-        for (Order order : orders) {
-            String data = order.getCustomerName() + ",";
-            for (Dish dish : order.getAllDishes()) {
+        for (Object order : orders) {
+            String data = ((Order) order).getCustomerName() + ",";
+            for (Dish dish : ((Order) order).getAllDishes()) {
                 data += dish.getDishName() + ","
                         + dish.getDishType() + ","
                         + dish.isGlutenFree() + ","
@@ -103,7 +103,7 @@ public class SalesService implements OnlineOrderOps {
     }
 
     public List getDishesByType(List dishes, String dishType) {
-        List<Object> result = new ArrayList<Object>();
+        List result = new ArrayList<Object>();
         for (Object dish : dishes) {
             if (dish != null) {
                 String typeName = valueOf(((Dish) dish).getDishType());
@@ -116,7 +116,7 @@ public class SalesService implements OnlineOrderOps {
     }
 
     public List getDishesByCategory(List dishes, String category) {
-        List<Object> result = new ArrayList<Object>();
+        List result = new ArrayList<Object>();
         for (Object dish : dishes) {
             if (dish != null) {
                 if (((Dish) dish).isGlutenFree() && category.equals("gfd")) {
@@ -133,25 +133,25 @@ public class SalesService implements OnlineOrderOps {
         return result;
     }
 
-    public String getStatsByCategory(List dishes, String category) {
-        List<Object> dishesByCategory = getDishesByCategory(dishes, category);
-        double stats = (dishesByCategory.size()/dishes.size()) * 100;
-        return stats + "% of orders are " + category;
-    }
-
-    public String getStatsByCategoryAndCustomer(List orders, String customerName, String category) {
-        List<Object> orderedDishesByCategory = getDishesByCategory(getDishesByCustomer(orders, customerName), category);
-        double stats = (orderedDishesByCategory.size()/getDishesByCustomer(orders, customerName).size()) * 100;
-        return stats + "% of orders from " + customerName + " are " + category;
-    }
-
-    public List<Object> getDishesByCustomer(List<Order> orders, String customerName){
-        List<Object> dishesByCustomer = new ArrayList<Object>();
+    public List getDishesByCustomer(List orders, String customerName){
+        List dishesByCustomer = new ArrayList<Object>();
         for (Object order : orders) {
             if (((Order) order).getCustomerName().equals(customerName)) {
                 dishesByCustomer.add(order);
             }
         }
         return dishesByCustomer;
+    }
+
+    public String getStatsByCategory(List dishes, String category) {
+        List dishesByCategory = getDishesByCategory(dishes, category);
+        double stats = (dishesByCategory.size()/dishes.size()) * 100;
+        return stats + "% of orders are " + category;
+    }
+
+    public String getStatsByCategoryAndCustomer(List orders, String customerName, String category) {
+        List orderedDishesByCategory = getDishesByCategory(getDishesByCustomer(orders, customerName), category);
+        double stats = (orderedDishesByCategory.size()/getDishesByCustomer(orders, customerName).size()) * 100;
+        return stats + "% of orders from " + customerName + " are " + category;
     }
 }

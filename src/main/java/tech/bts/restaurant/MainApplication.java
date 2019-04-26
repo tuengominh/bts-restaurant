@@ -12,16 +12,16 @@ public class MainApplication {
 
         /**Print required information by reading CSV file*/
         SalesService salesService = new SalesService();
-        List<Order> orders = salesService.readOrders("src/main/resources/online-order-sample.csv");
+        List orders = salesService.readOrders("src/main/resources/online-order-sample.csv");
 
         System.out.println("Welcome to Tue's restaurant!" + "\n");
         System.out.println("# Number of orders: " + salesService.getNumberOrders(orders) + "\n");
         System.out.println("# All orders:\n" + salesService.getAllOrdersToString(orders));
         System.out.println("# The last order:\n" + salesService.getOrder(orders,orders.size()-1));
 
-        List<Dish> dishes = new ArrayList<Dish>();
-        for (Order order : orders) {
-            for (Dish dish : order.getAllDishes()) {
+        List dishes = new ArrayList<Object>();
+        for (Object order : orders) {
+            for (Dish dish : ((Order) order).getAllDishes()) {
                 dishes.add(dish);
             }
         }
@@ -36,6 +36,11 @@ public class MainApplication {
 
         System.out.println("\n# All vegetarian dishes:");
         for (Object dish : salesService.getDishesByCategory(dishes, "vgd")) {
+            System.out.println(dish.toString());
+        }
+
+        System.out.println("\n# All dishes by Tue Ngo:");
+        for (Object dish : salesService.getDishesByCustomer(orders, "Tue Ngo")) {
             System.out.println(dish.toString());
         }
 
