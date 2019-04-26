@@ -139,7 +139,11 @@ public class SalesService implements OnlineOrderOps {
         List dishesByCustomer = new ArrayList<Object>();
         for (Object order : orders) {
             if (((Order) order).getCustomerName().equals(customerName)) {
-                dishesByCustomer.add(order);
+                for (Dish dish : ((Order) order).getAllDishes()) {
+                    if (dish != null) {
+                        dishesByCustomer.add(dish);
+                    }
+                }
             }
         }
         return dishesByCustomer;
@@ -147,13 +151,13 @@ public class SalesService implements OnlineOrderOps {
 
     public String getStatsByCategory(List dishes, String category) {
         List dishesByCategory = getDishesByCategory(dishes, category);
-        double stats = (dishesByCategory.size()/dishes.size()) * 100;
-        return stats + "% of orders are " + category;
+        double stats = 100.0 * dishesByCategory.size() / dishes.size();
+        return String.format("%.2f", stats) + "% of orders are " + category;
     }
 
     public String getStatsByCategoryAndCustomer(List orders, String customerName, String category) {
         List orderedDishesByCategory = getDishesByCategory(getDishesByCustomer(orders, customerName), category);
-        double stats = (orderedDishesByCategory.size()/getDishesByCustomer(orders, customerName).size()) * 100;
-        return stats + "% of orders from " + customerName + " are " + category;
+        double stats = 100.0 * orderedDishesByCategory.size() / getDishesByCustomer(orders, customerName).size();
+        return String.format("%.2f", stats) + "% of orders from " + customerName + " are " + category;
     }
 }

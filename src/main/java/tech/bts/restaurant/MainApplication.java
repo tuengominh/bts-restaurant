@@ -44,8 +44,8 @@ public class MainApplication {
             System.out.println(dish.toString());
         }
 
-        //System.out.println("\n# " + salesService.getStatsByCategory(dishes, "gfd") + "\n");
-        //System.out.println("\n# " + salesService.getStatsByCategoryAndCustomer(orders,"Tue Ngo", "gfd") + "\n");
+        System.out.println("\n# " + salesService.getStatsByCategory(dishes, "gfd") + "\n");
+        System.out.println("\n# " + salesService.getStatsByCategoryAndCustomer(orders,"Tue Ngo", "sfd") + "\n");
 
         /**Read inputs from users and add records to CSV file*/
 
