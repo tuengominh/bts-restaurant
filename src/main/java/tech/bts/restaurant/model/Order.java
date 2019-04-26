@@ -88,8 +88,8 @@ public class Order {
         this.dessert = dessert;
     }
 
-    /**@Override
+    @Override
     public String toString() {
         return "This order of " + customerName + " includes these dishes:\n" + starter.toString() + "\n" + mainCourse.toString() + "\n" + dessert.toString();
-    }*/
+    }
 }
