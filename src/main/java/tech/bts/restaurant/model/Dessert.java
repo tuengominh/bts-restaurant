@@ -17,5 +17,4 @@ public class Dessert extends Dish{
     public String toString() {
         return super.toString() + ", contains " + extras + " calories";
     }
-
 }

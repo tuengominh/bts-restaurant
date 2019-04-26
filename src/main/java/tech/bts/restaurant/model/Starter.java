@@ -17,5 +17,4 @@ public class Starter extends Dish {
     public String toString() {
         return super.toString() + ", cutlery: " + extras;
     }
-
 }
