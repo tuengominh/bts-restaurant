@@ -28,15 +28,15 @@ public class SalesService implements OnlineOrderOps {
             if (record[2] == "st") {
                 Starter dish = new Starter(record[1]);
                 addRecordDetails(dish, record);
-                order.addDishToOrder(dish);
+                order.setStarter(dish);
             } else if (record[2] == "mc") {
                 MainCourse dish = new MainCourse(record[1]);
                 addRecordDetails(dish, record);
-                order.addDishToOrder(dish);
+                order.setMainCourse(dish);
             } else if (record[2] == "ds") {
                 Dessert dish = new Dessert(record[1]);
                 addRecordDetails(dish, record);
-                order.addDishToOrder(dish);
+                order.setDessert(dish);
             }
             orders.add(order);
         }
