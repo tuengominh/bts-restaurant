@@ -57,13 +57,15 @@ public class SalesService implements OnlineOrderOps {
         for (Object order : orders) {
             String data = ((Order) order).getCustomerName() + ",";
             for (Dish dish : ((Order) order).getAllDishes()) {
-                data += dish.getDishName() + ","
-                        + dish.getDishType() + ","
-                        + dish.isGlutenFree() + ","
-                        + dish.isVegetarian() + ","
-                        + dish.isHalalMeat() + ","
-                        + dish.isSeafoodFree() + ","
-                        + dish.getExtras();
+                if (dish != null) {
+                    data += dish.getDishName() + ","
+                            + dish.getDishType() + ","
+                            + dish.isGlutenFree() + ","
+                            + dish.isVegetarian() + ","
+                            + dish.isHalalMeat() + ","
+                            + dish.isSeafoodFree() + ","
+                            + dish.getExtras();
+                }
             }
             String [] record = data.split(",");
             writer.writeNext(record);

@@ -44,8 +44,8 @@ public class MainApplication {
             System.out.println(dish.toString());
         }
 
-        System.out.println("\n# " + salesService.getStatsByCategory(dishes, "gfd") + "\n");
-        System.out.println("\n# " + salesService.getStatsByCategoryAndCustomer(orders,"Tue Ngo", "gfd") + "\n");
+        //System.out.println("\n# " + salesService.getStatsByCategory(dishes, "gfd") + "\n");
+        //System.out.println("\n# " + salesService.getStatsByCategoryAndCustomer(orders,"Tue Ngo", "gfd") + "\n");
 
         /**Read inputs from users and add records to CSV file*/
 
@@ -59,38 +59,21 @@ public class MainApplication {
         //For now dummy data is loaded. In the future a menu.csv file can be used to store data
         Menu menu = new Menu();
         menu.addDish(new Starter("Tomato Soup", true, true, false, true, "Spoon"));
-        menu.addDish(new Starter("Mushroom Pasta", false, false, false, true, "Fork"));
-        menu.addDish(new Starter("Green Salad", true, true, false, false, "Fork"));
-
         menu.addDish(new MainCourse("Beefsteak with Mushroom Sauce", false, false, false, true, "Beef-Red wine"));
-        menu.addDish(new MainCourse("Vegetables Wok", true, true, false, true, "Vegetables-Tea"));
-        menu.addDish(new MainCourse("Grilled Cod Fish", false, false, false, false, "White fish-Champagne"));
-
-        menu.addDish(new Dessert("Mango Ice-cream", false, true, false, true, "120"));
-        menu.addDish(new Dessert("Brownie Cake", false, false, false, true, "220"));
         menu.addDish(new Dessert("Orange Carpaccio", true, true, false, true, "60"));
 
-        System.out.println("# Choose your starter: ");
-        for (Dish dish : menu.getAllStarters()) {
-            System.out.println(dish.toString());
-            if(dish.getDishName().contains(scanner.nextLine())){
-                order.setStarter(dish);
-            }
-        }
+        System.out.println("# Choose your dish: ");
+        System.out.println(menu.toString());
 
-        System.out.println("# Choose your main course: ");
-        for (Dish dish : menu.getAllMainCourses()) {
-            System.out.println(dish.toString());
+        for (Dish dish : menu.getAllDishes()) {
             if(dish.getDishName().contains(scanner.nextLine())){
-                order.setMainCourse(dish);
-            }
-        }
-
-        System.out.println("# Choose your dessert: ");
-        for (Dish dish : menu.getAllDesserts()) {
-            System.out.println(dish.toString());
-            if(dish.getDishName().contains(scanner.nextLine())){
-                order.setDessert(dish);
+                if(dish.getClass().getName().equals("Starter")){
+                    order.setStarter(dish);
+                } else if(dish.getClass().getName().equals("MainCourse")){
+                    order.setMainCourse(dish);
+                } else if(dish.getClass().getName().equals("Dessert")){
+                    order.setDessert(dish);
+                }
             }
         }
         orderList.add(order);
