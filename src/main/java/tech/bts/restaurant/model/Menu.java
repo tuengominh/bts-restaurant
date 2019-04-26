@@ -1,4 +1,4 @@
-package tech.bts.mobiledevjava.model;
+package tech.bts.restaurant.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,16 +15,6 @@ public class Menu {
         this.desserts = new ArrayList<Dish>();
     }
 
-    public void addDish(Dish dish) {
-        if (dish.getDishType() == Dish.Type.st) {
-            this.starters.add(dish);
-        } else if (dish.getDishType() == Dish.Type.mc) {
-            this.mainCourses.add(dish);
-        } else if (dish.getDishType() == Dish.Type.ds) {
-            this.desserts.add(dish);
-        }
-    }
-
     //getters
     public List<Dish> getAllStarters() {
         return starters;
@@ -34,6 +24,17 @@ public class Menu {
     }
     public List<Dish> getAllDesserts() {
         return desserts;
+    }
+
+    //later can be developed into a MenuService/MenuManager class
+    public void addDish(Dish dish) {
+        if (dish.getDishType() == Dish.Type.st) {
+            this.starters.add(dish);
+        } else if (dish.getDishType() == Dish.Type.mc) {
+            this.mainCourses.add(dish);
+        } else if (dish.getDishType() == Dish.Type.ds) {
+            this.desserts.add(dish);
+        }
     }
 
     public List<Dish> getAllDishes() {
@@ -46,6 +47,23 @@ public class Menu {
         }
         for (int i = 0; i < desserts.size(); i++) {
             result.add(desserts.get(i));
+        }
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        String result = "Starters:\n";
+        for (Dish starter : starters) {
+            result += starter.getDishName() + "\n";
+        }
+        result += "\n" + "Main courses:\n";
+        for (Dish mainCourse : mainCourses) {
+            result += mainCourse.getDishName() + "\n";
+        }
+        result += "\n" + "Desserts:\n";
+        for (Dish dessert : desserts) {
+            result += dessert.getDishName() + "\n";
         }
         return result;
     }

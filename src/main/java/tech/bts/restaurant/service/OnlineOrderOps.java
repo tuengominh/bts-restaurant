@@ -1,7 +1,6 @@
-package tech.bts.mobiledevjava.service;
+package tech.bts.restaurant.service;
 
-import tech.bts.mobiledevjava.model.Customer;
-import tech.bts.mobiledevjava.model.Dish;
+import tech.bts.restaurant.model.Dish;
 
 import java.util.List;
 
@@ -33,8 +32,5 @@ public interface OnlineOrderOps<T, S extends Dish>  {
     List<S> getDishesByCategory(List<S> dishes, String category);
 
     // returns the percentage of dishes ordered which match a category (gfd, vgd, hmd, or sfd) used as input argument
-    double getStatsByCategory(List<S> dishes, String category);
-
-    // returns the percentage of dishes ordered which match a category (gfd, vgd, hmd, or sfd) and customer used as input argument
-    double getStatsByCategoryAndCustomer(List<S> dishes, Customer customer, String category);
+    String getStatsByCategory(List<S> dishes, String category);
 }

@@ -1,4 +1,4 @@
-package tech.bts.mobiledevjava.model;
+package tech.bts.restaurant.model;
 
 public class MainCourse extends Dish {
 
