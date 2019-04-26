@@ -14,10 +14,10 @@ public class MainApplication {
         SalesService salesService = new SalesService();
         List<Order> orders = salesService.readOrders("src/main/resources/online-order-sample.csv");
 
-        System.out.println("Welcome to Tue's restaurant!");
-        System.out.println("\n# Number of orders: " + salesService.getNumberOrders(orders));
-        System.out.println("\n# All orders:\n" + salesService.getAllOrdersToString(orders));
-        System.out.println("\n# The last order:\n" + salesService.getOrder(orders,orders.size()-1));
+        System.out.println("Welcome to Tue's restaurant!" + "\n");
+        System.out.println("# Number of orders: " + salesService.getNumberOrders(orders) + "\n");
+        System.out.println("# All orders:\n" + salesService.getAllOrdersToString(orders));
+        System.out.println("# The last order:\n" + salesService.getOrder(orders,orders.size()-1));
 
         List<Dish> dishes = new ArrayList<Dish>();
         for (Order order : orders) {
@@ -26,11 +26,18 @@ public class MainApplication {
             }
         }
 
-        System.out.println("\n# All dishes:\n" + salesService.getAllDishToString(dishes));
-        System.out.println("\n# The first dish ordered:\n" + salesService.getDish(dishes,0));
+        System.out.println("# All dishes:\n" + salesService.getAllDishToString(dishes));
+        System.out.println("# The first dish ordered:\n" + salesService.getDish(dishes,0));
 
-        System.out.println("\n# All starters ordered:\n" + salesService.getDishesByType(dishes, "st"));
-        System.out.println("\n# All vegetarian dishes:\n" + salesService.getDishesByCategory(dishes, "vgd"));
+        System.out.println("\n# All starters ordered:");
+        for (Object dish : salesService.getDishesByType(dishes, "st")) {
+            System.out.println(dish.toString());
+        }
+
+        System.out.println("\n# All vegetarian dishes:");
+        for (Object dish : salesService.getDishesByCategory(dishes, "vgd")) {
+            System.out.println(dish.toString());
+        }
 
         System.out.println("\n# " + salesService.getStatsByCategory(dishes, "gfd") + "\n");
         System.out.println("\n# " + salesService.getStatsByCategoryAndCustomer(orders,"Tue Ngo", "gfd") + "\n");

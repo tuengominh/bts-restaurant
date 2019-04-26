@@ -25,15 +25,15 @@ public class SalesService implements OnlineOrderOps {
 
         for (String[] record : records) {
             Order order = new Order(record[0]);
-            if (record[2] == "st") {
+            if (record[2].equals("st")) {
                 Starter dish = new Starter(record[1]);
                 addRecordDetails(dish, record);
                 order.setStarter(dish);
-            } else if (record[2] == "mc") {
+            } else if (record[2].equals("mc")) {
                 MainCourse dish = new MainCourse(record[1]);
                 addRecordDetails(dish, record);
                 order.setMainCourse(dish);
-            } else if (record[2] == "ds") {
+            } else if (record[2].equals("ds")) {
                 Dessert dish = new Dessert(record[1]);
                 addRecordDetails(dish, record);
                 order.setDessert(dish);
@@ -95,7 +95,9 @@ public class SalesService implements OnlineOrderOps {
     public String getAllDishToString(List dishes) {
         String result = "";
         for (Object dish : dishes) {
-            result += dish.toString() + "\n";
+            if (dish != null) {
+                result += dish.toString() + "\n";
+            }
         }
         return result;
     }
@@ -103,9 +105,11 @@ public class SalesService implements OnlineOrderOps {
     public List getDishesByType(List dishes, String dishType) {
         List<Object> result = new ArrayList<Object>();
         for (Object dish : dishes) {
-            String typeName = valueOf(((Dish) dish).getDishType());
-            if (typeName.equals(dishType)) {
-                result.add(dish);
+            if (dish != null) {
+                String typeName = valueOf(((Dish) dish).getDishType());
+                if (typeName.equals(dishType)) {
+                    result.add(dish);
+                }
             }
         }
         return result;
@@ -114,14 +118,16 @@ public class SalesService implements OnlineOrderOps {
     public List getDishesByCategory(List dishes, String category) {
         List<Object> result = new ArrayList<Object>();
         for (Object dish : dishes) {
-            if (((Dish) dish).isGlutenFree() && category.equals("gfd")) {
-                result.add(dish);
-            } else if (((Dish) dish).isVegetarian() && category.equals("vgd")) {
-                result.add(dish);
-            } else if (((Dish) dish).isHalalMeat() && category.equals("hmd")) {
-                result.add(dish);
-            } else if (((Dish) dish).isSeafoodFree() && category.equals("sfd")) {
-                result.add(dish);
+            if (dish != null) {
+                if (((Dish) dish).isGlutenFree() && category.equals("gfd")) {
+                    result.add(dish);
+                } else if (((Dish) dish).isVegetarian() && category.equals("vgd")) {
+                    result.add(dish);
+                } else if (((Dish) dish).isHalalMeat() && category.equals("hmd")) {
+                    result.add(dish);
+                } else if (((Dish) dish).isSeafoodFree() && category.equals("sfd")) {
+                    result.add(dish);
+                }
             }
         }
         return result;
@@ -139,10 +145,10 @@ public class SalesService implements OnlineOrderOps {
         return stats + "% of orders from " + customerName + " are " + category;
     }
 
-    public List<Order> getDishesByCustomer(List<Order> orders, String customerName){
-        List<Order> dishesByCustomer = new ArrayList<Order>();
-        for (Order order : orders) {
-            if (order.getCustomerName().equals(customerName)) {
+    public List<Object> getDishesByCustomer(List<Order> orders, String customerName){
+        List<Object> dishesByCustomer = new ArrayList<Object>();
+        for (Object order : orders) {
+            if (((Order) order).getCustomerName().equals(customerName)) {
                 dishesByCustomer.add(order);
             }
         }
