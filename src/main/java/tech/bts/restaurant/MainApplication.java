@@ -17,13 +17,11 @@ public class MainApplication {
         System.out.println("Welcome to Tue's restaurant!" + "\n");
         System.out.println("# Number of orders: " + salesService.getNumberOrders(orders) + "\n");
         System.out.println("# All orders:\n" + salesService.getAllOrdersToString(orders));
-        System.out.println("# The last order:\n" + salesService.getOrder(orders,orders.size()-1));
+        System.out.println("# The last order:\n" + salesService.getOrder(orders,orders.size()-1) + "\n");
 
         List dishes = new ArrayList<Object>();
         for (Object order : orders) {
-            for (BaseDish baseDish : ((Order) order).getAllDishes()) {
-                dishes.add(baseDish);
-            }
+            dishes.add(((Order) order).getCustomerDish());
         }
 
         System.out.println("# All dishes:\n" + salesService.getAllDishToString(dishes));
@@ -44,17 +42,16 @@ public class MainApplication {
             System.out.println(dish.toString());
         }
 
-        System.out.println("\n# " + salesService.getStatsByCategory(dishes, "gfd"));
+        System.out.println("\n# " + salesService.getStatsByCategory(dishes, "sfd"));
         System.out.println("\n# " + salesService.getStatsByCategoryAndCustomer(orders,"Eole Cervenka", "gfd") + "\n");
 
         /**Read inputs from users and add records to CSV file*/
 
         Scanner scanner = new Scanner(System.in);
         List<Order> orderList = new ArrayList<Order>();
-        Order order = new Order();
 
         System.out.println("# Your name: ");
-        order.setCustomerName(scanner.nextLine());
+        Order order = new Order(scanner.nextLine());
 
         //For now dummy data is loaded. In the future a menu.csv file can be used to store data
         Menu menu = new Menu();
@@ -67,16 +64,11 @@ public class MainApplication {
 
         for (BaseDish baseDish : menu.getAllDishes()) {
             if(baseDish.getDishName().contains(scanner.nextLine())){
-                if(baseDish.getClass().getName().equals("Starter")){
-                    order.setStarter(baseDish);
-                } else if(baseDish.getClass().getName().equals("MainCourse")){
-                    order.setMainCourse(baseDish);
-                } else if(baseDish.getClass().getName().equals("Dessert")){
-                    order.setDessert(baseDish);
-                }
+                order.setCustomerDish(baseDish);
             }
         }
         orderList.add(order);
         salesService.writeOrders(orderList,"src/main/resources/online-order-sample.csv");
+        System.out.println(order.toString());
     }
 }

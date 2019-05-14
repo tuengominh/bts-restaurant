@@ -140,10 +140,9 @@ public class SalesService implements OnlineOrderOps {
         List dishesByCustomer = new ArrayList<Object>();
         for (Object order : orders) {
             if (((Order) order).getCustomerName().equals(customerName)) {
-                for (BaseDish baseDish : ((Order) order).getAllDishes()) {
-                    if (baseDish != null) {
-                        dishesByCustomer.add(baseDish);
-                    }
+                BaseDish baseDish = ((Order) order).getCustomerDish();
+                if (baseDish != null) {
+                    dishesByCustomer.add(baseDish);
                 }
             }
         }
