@@ -28,48 +28,49 @@ public class SalesService implements OnlineOrderOps {
             if (record[2].equals("st")) {
                 Starter dish = new Starter(record[1]);
                 addRecordDetails(dish, record);
-                order.setStarter(dish);
+                order.setCustomerDish(dish);
             } else if (record[2].equals("mc")) {
                 MainCourse dish = new MainCourse(record[1]);
                 addRecordDetails(dish, record);
-                order.setMainCourse(dish);
+                order.setCustomerDish(dish);
             } else if (record[2].equals("ds")) {
                 Dessert dish = new Dessert(record[1]);
                 addRecordDetails(dish, record);
-                order.setDessert(dish);
+                order.setCustomerDish(dish);
             }
             orders.add(order);
         }
         return orders;
     }
 
-    public void addRecordDetails(Dish dish, String[] record) {
-        dish.setGlutenFree(Boolean.parseBoolean(record[3]));
-        dish.setVegetarian(Boolean.parseBoolean(record[4]));
-        dish.setHalalMeat(Boolean.parseBoolean(record[5]));
-        dish.setSeafoodFree(Boolean.parseBoolean(record[6]));
-        dish.setExtras(record[7]);
+    public void addRecordDetails(BaseDish baseDish, String[] record) {
+        baseDish.setGlutenFree(Boolean.parseBoolean(record[3]));
+        baseDish.setVegetarian(Boolean.parseBoolean(record[4]));
+        baseDish.setHalalMeat(Boolean.parseBoolean(record[5]));
+        baseDish.setSeafoodFree(Boolean.parseBoolean(record[6]));
+        baseDish.setExtras(record[7]);
     }
 
     // update new order to CSV file
     public void writeOrders(List orders, String path) throws Exception {
         CSVWriter writer = new CSVWriter(new FileWriter(path, true));
-        for (Object order : orders) {
-            String data = ((Order) order).getCustomerName() + ",";
-            for (Dish dish : ((Order) order).getAllDishes()) {
-                if (dish != null) {
-                    data += dish.getDishName() + ","
-                            + dish.getDishType() + ","
-                            + dish.isGlutenFree() + ","
-                            + dish.isVegetarian() + ","
-                            + dish.isHalalMeat() + ","
-                            + dish.isSeafoodFree() + ","
-                            + dish.getExtras();
-                }
-            }
-            String [] record = data.split(",");
-            writer.writeNext(record);
+        String data = "";
+        for (Object object : orders) {
+            Order order = (Order) object;
+            BaseDish dish = order.getCustomerDish();
+
+            data = order.getCustomerName() + ","
+                    + dish.getDishName() + ","
+                    + dish.getDishType() + ","
+                    + dish.isGlutenFree() + ","
+                    + dish.isVegetarian() + ","
+                    + dish.isHalalMeat() + ","
+                    + dish.isSeafoodFree() + ","
+                    + dish.getExtras();
         }
+
+        String[] record = data.split(",");
+        writer.writeNext(record);
         writer.close();
         System.out.println("Order has been added.");
     }
@@ -90,8 +91,8 @@ public class SalesService implements OnlineOrderOps {
         return result;
     }
 
-    public Dish getDish(List dishes, int dishId) {
-        return (Dish) dishes.get(dishId);
+    public BaseDish getDish(List dishes, int dishId) {
+        return (BaseDish) dishes.get(dishId);
     }
 
     public String getAllDishToString(List dishes) {
@@ -108,7 +109,7 @@ public class SalesService implements OnlineOrderOps {
         List result = new ArrayList<Object>();
         for (Object dish : dishes) {
             if (dish != null) {
-                String typeName = valueOf(((Dish) dish).getDishType());
+                String typeName = valueOf(((BaseDish) dish).getDishType());
                 if (typeName.equals(dishType)) {
                     result.add(dish);
                 }
@@ -121,13 +122,13 @@ public class SalesService implements OnlineOrderOps {
         List result = new ArrayList<Object>();
         for (Object dish : dishes) {
             if (dish != null) {
-                if (((Dish) dish).isGlutenFree() && category.equals("gfd")) {
+                if (((BaseDish) dish).isGlutenFree() && category.equals("gfd")) {
                     result.add(dish);
-                } else if (((Dish) dish).isVegetarian() && category.equals("vgd")) {
+                } else if (((BaseDish) dish).isVegetarian() && category.equals("vgd")) {
                     result.add(dish);
-                } else if (((Dish) dish).isHalalMeat() && category.equals("hmd")) {
+                } else if (((BaseDish) dish).isHalalMeat() && category.equals("hmd")) {
                     result.add(dish);
-                } else if (((Dish) dish).isSeafoodFree() && category.equals("sfd")) {
+                } else if (((BaseDish) dish).isSeafoodFree() && category.equals("sfd")) {
                     result.add(dish);
                 }
             }
@@ -139,9 +140,9 @@ public class SalesService implements OnlineOrderOps {
         List dishesByCustomer = new ArrayList<Object>();
         for (Object order : orders) {
             if (((Order) order).getCustomerName().equals(customerName)) {
-                for (Dish dish : ((Order) order).getAllDishes()) {
-                    if (dish != null) {
-                        dishesByCustomer.add(dish);
+                for (BaseDish baseDish : ((Order) order).getAllDishes()) {
+                    if (baseDish != null) {
+                        dishesByCustomer.add(baseDish);
                     }
                 }
             }

@@ -1,14 +1,9 @@
 package tech.bts.restaurant.model;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class Order {
 
     private String customerName;
-    private Starter starter;
-    private MainCourse mainCourse;
-    private Dessert dessert;
+    private BaseDish customerDish;
 
     //empty constructor
     public Order() {}
@@ -19,15 +14,10 @@ public class Order {
     }
 
     //constructor with all parameters
-    public Order(String customerName, Starter starter, MainCourse mainCourse, Dessert dessert) {
+    public Order(String customerName, BaseDish customerDish) {
         this.customerName = customerName;
-        this.starter = starter;
-        this.mainCourse = mainCourse;
-        this.dessert = dessert;
+        this.customerDish = customerDish;
     }
-
-    //get a List of all dishes from the order
-    public List<Dish> getAllDishes() { return Arrays.asList(starter, mainCourse, dessert); }
 
     public String getCustomerName() { return customerName; }
 
@@ -35,39 +25,15 @@ public class Order {
         this.customerName = customerName;
     }
 
+    public BaseDish getCustomerDish() { return customerDish; }
+
+    public void setCustomerDish(BaseDish customerDish) { this.customerDish = customerDish; }
+
     //get the Order object
     public Order getOrder() { return this; }
 
-    public Starter getStarter() { return starter; }
-
-    public void setStarter(Dish starter) {
-        this.starter = (Starter) starter;
-    }
-
-    public MainCourse getMainCourse() { return mainCourse; }
-
-    public void setMainCourse(Dish mainCourse) {
-        this.mainCourse = (MainCourse) mainCourse;
-    }
-
-    public Dessert getDessert() { return dessert; }
-
-    public void setDessert(Dish dessert) {
-        this.dessert = (Dessert) dessert;
-    }
-
     @Override
     public String toString() {
-        String result = "This order of " + customerName + " includes these dishes:\n";
-        if(starter != null) {
-            result += starter.toString() + "\n";
-        }
-        if(mainCourse != null) {
-            result += mainCourse.toString() + "\n";
-        }
-        if(dessert != null) {
-            result += dessert.toString() + "\n";
-        }
-        return result;
+        return customerName + " has ordered: " + customerDish.toString();
     }
 }

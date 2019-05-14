@@ -1,10 +1,10 @@
 package tech.bts.restaurant.service;
 
-import tech.bts.restaurant.model.Dish;
+import tech.bts.restaurant.model.BaseDish;
 
 import java.util.List;
 
-public interface OnlineOrderOps<T, S extends Dish>  {
+public interface OnlineOrderOps<T, S extends BaseDish>  {
     /**'OnlineOrderOps' is an interface designed by the system administrator.
      * The aim is to indicate the developer (you, in this case)
      * in which way the on-line order data should be accessed/treated/employed within the application.
@@ -25,10 +25,10 @@ public interface OnlineOrderOps<T, S extends Dish>  {
     // retrieves a String outlining all the dish names included in a List.
     String getAllDishToString(List<S> dishes);
 
-    // retrieves a List of Dish-related objects corresponding to those dishes which match the type 'dishType' (st, mc, or ds) used as input argument
+    // retrieves a List of BaseDish-related objects corresponding to those dishes which match the type 'dishType' (st, mc, or ds) used as input argument
     List<S> getDishesByType(List<S> dishes, String dishType);
 
-    // returns a List of Dish-related objects including those dishes which match a category (gfd, vgd, hmd, or sfd) used as input argument
+    // returns a List of BaseDish-related objects including those dishes which match a category (gfd, vgd, hmd, or sfd) used as input argument
     List<S> getDishesByCategory(List<S> dishes, String category);
 
     // returns the percentage of dishes ordered which match a category (gfd, vgd, hmd, or sfd) used as input argument

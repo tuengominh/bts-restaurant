@@ -1,6 +1,6 @@
 package tech.bts.restaurant.model;
 
-public class MainCourse extends Dish {
+public class MainCourse extends BaseDish {
 
     public MainCourse(String dishName, boolean glutenFree, boolean vegetarian, boolean halalMeat, boolean seafoodFree, String extras) {
         super(dishName, glutenFree, vegetarian, halalMeat, seafoodFree, extras);

@@ -21,8 +21,8 @@ public class MainApplication {
 
         List dishes = new ArrayList<Object>();
         for (Object order : orders) {
-            for (Dish dish : ((Order) order).getAllDishes()) {
-                dishes.add(dish);
+            for (BaseDish baseDish : ((Order) order).getAllDishes()) {
+                dishes.add(baseDish);
             }
         }
 
@@ -44,8 +44,8 @@ public class MainApplication {
             System.out.println(dish.toString());
         }
 
-        System.out.println("\n# " + salesService.getStatsByCategory(dishes, "gfd") + "\n");
-        System.out.println("\n# " + salesService.getStatsByCategoryAndCustomer(orders,"Tue Ngo", "sfd") + "\n");
+        System.out.println("\n# " + salesService.getStatsByCategory(dishes, "gfd"));
+        System.out.println("\n# " + salesService.getStatsByCategoryAndCustomer(orders,"Eole Cervenka", "gfd") + "\n");
 
         /**Read inputs from users and add records to CSV file*/
 
@@ -65,14 +65,14 @@ public class MainApplication {
         System.out.println("# Choose your dish: ");
         System.out.println(menu.toString());
 
-        for (Dish dish : menu.getAllDishes()) {
-            if(dish.getDishName().contains(scanner.nextLine())){
-                if(dish.getClass().getName().equals("Starter")){
-                    order.setStarter(dish);
-                } else if(dish.getClass().getName().equals("MainCourse")){
-                    order.setMainCourse(dish);
-                } else if(dish.getClass().getName().equals("Dessert")){
-                    order.setDessert(dish);
+        for (BaseDish baseDish : menu.getAllDishes()) {
+            if(baseDish.getDishName().contains(scanner.nextLine())){
+                if(baseDish.getClass().getName().equals("Starter")){
+                    order.setStarter(baseDish);
+                } else if(baseDish.getClass().getName().equals("MainCourse")){
+                    order.setMainCourse(baseDish);
+                } else if(baseDish.getClass().getName().equals("Dessert")){
+                    order.setDessert(baseDish);
                 }
             }
         }
