@@ -59,14 +59,16 @@ public class MainApplication {
         menu.addDish(new MainCourse("Beefsteak with Mushroom Sauce", false, false, false, true, "Beef-Red wine"));
         menu.addDish(new Dessert("Orange Carpaccio", true, true, false, true, "60"));
 
-        System.out.println("# Choose your dish: ");
+        System.out.println("\n# Choose your dish: ");
         System.out.println(menu.toString());
 
-        for (BaseDish baseDish : menu.getAllDishes()) {
-            if(baseDish.getDishName().contains(scanner.nextLine())){
-                order.setCustomerDish(baseDish);
+        String input = scanner.nextLine();
+        for (BaseDish dish : menu.getAllDishes()) {
+            if(dish.getDishName().contains(input)){
+                order.setCustomerDish(dish);
             }
         }
+
         orderList.add(order);
         salesService.writeOrders(orderList,"src/main/resources/online-order-sample.csv");
         System.out.println(order.toString());
