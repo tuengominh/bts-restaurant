@@ -4,12 +4,9 @@
     <list default="true" id="2c7a2b7f-30f6-4d70-b901-07ae54f5665d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tech/bts/restaurant/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/bts/restaurant/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tech/bts/restaurant/service/SalesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/bts/restaurant/service/SalesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/online-order-sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/online-order-sample.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/online-order-sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/online-order-sample.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tech/bts/restaurant/MainApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tech/bts/restaurant/MainApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tech/bts/restaurant/model/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tech/bts/restaurant/model/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tech/bts/restaurant/model/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tech/bts/restaurant/model/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tech/bts/restaurant/service/SalesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tech/bts/restaurant/service/SalesService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,15 +37,15 @@
           <entry key="csv" value="360" />
           <entry key="dummy" value="63" />
           <entry key="gitignore" value="21" />
-          <entry key="java" value="8450" />
-          <entry key="txt" value="112" />
+          <entry key="java" value="8479" />
+          <entry key="txt" value="146" />
           <entry key="xml" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8450" />
-          <entry key="PLAIN_TEXT" value="556" />
+          <entry key="JAVA" value="8479" />
+          <entry key="PLAIN_TEXT" value="590" />
           <entry key="XML" value="19" />
         </counts>
       </usages-collector>
@@ -56,13 +53,13 @@
         <counts>
           <entry key="csv" value="38" />
           <entry key="gitignore" value="4" />
-          <entry key="java" value="337" />
+          <entry key="java" value="338" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="337" />
+          <entry key="JAVA" value="338" />
           <entry key="PLAIN_TEXT" value="42" />
           <entry key="XML" value="4" />
         </counts>
@@ -71,13 +68,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tech/bts/restaurant/MainApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="66" column="48" lean-forward="true" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
+            <state relative-caret-position="507">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tech/bts/restaurant/model/Menu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#163#164#0" expanded="true" />
+                <element signature="e#218#219#0" expanded="true" />
+                <element signature="e#526#536#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,7 +104,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/online-order-sample.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -162,7 +174,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="29" />
-    <option name="width" value="1440" />
+    <option name="width" value="1309" />
     <option name="height" value="849" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -263,7 +275,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557829197515" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557829508686" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -331,7 +343,7 @@
       <workItem from="1556293876932" duration="35000" />
       <workItem from="1556294606123" duration="856000" />
       <workItem from="1557106114963" duration="11000" />
-      <workItem from="1557826405736" duration="2841000" />
+      <workItem from="1557826405736" duration="3118000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1555604057194</created>
@@ -410,16 +422,23 @@
       <option name="project" value="LOCAL" />
       <updated>1557828307594</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fix all methods in Sales Service">
+      <created>1557829304397</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1557829304397</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49907000" />
+    <option name="totallyTimeSpent" value="50184000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="29" width="1440" height="849" extended-state="0" />
+    <frame x="0" y="29" width="1309" height="849" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2832618" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31254932" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -428,7 +447,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32833788" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.1920981" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5531335" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.49591282" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -463,7 +482,8 @@
     <MESSAGE value="Fix methods" />
     <MESSAGE value="Fix writeCSV methods" />
     <MESSAGE value="Add BaseDish extends Dish" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add BaseDish extends Dish" />
+    <MESSAGE value="Fix all methods in Sales Service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix all methods in Sales Service" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/.gitignore">
@@ -516,19 +536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tech/bts/restaurant/model/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#163#164#0" expanded="true" />
-            <element signature="e#218#219#0" expanded="true" />
-            <element signature="e#526#536#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tech/bts/restaurant/model/Starter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -566,20 +573,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/online-order-sample.csv">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tech/bts/restaurant/model/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="78" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
+        <state relative-caret-position="420">
+          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#163#164#0" expanded="true" />
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#526#536#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tech/bts/restaurant/MainApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="48" lean-forward="true" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
+        <state relative-caret-position="507">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/online-order-sample.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="78" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
         </state>
       </provider>
     </entry>
