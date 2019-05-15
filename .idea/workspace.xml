@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="2c7a2b7f-30f6-4d70-b901-07ae54f5665d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/bts/restaurant/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/bts/restaurant/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tech/bts/restaurant/service/SalesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tech/bts/restaurant/service/SalesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/online-order-sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/online-order-sample.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tech/bts/restaurant/MainApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tech/bts/restaurant/MainApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tech/bts/restaurant/model/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tech/bts/restaurant/model/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tech/bts/restaurant/model/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tech/bts/restaurant/model/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tech/bts/restaurant/service/SalesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tech/bts/restaurant/service/SalesService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -16,16 +23,16 @@
     <session id="-873526609">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="19" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="4" />
-          <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="4" />
+          <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="4" />
-          <entry key="project.opened" value="19" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -33,30 +40,30 @@
           <entry key="csv" value="360" />
           <entry key="dummy" value="63" />
           <entry key="gitignore" value="21" />
-          <entry key="java" value="8479" />
-          <entry key="txt" value="146" />
+          <entry key="java" value="8450" />
+          <entry key="txt" value="112" />
           <entry key="xml" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8479" />
-          <entry key="PLAIN_TEXT" value="590" />
+          <entry key="JAVA" value="8450" />
+          <entry key="PLAIN_TEXT" value="556" />
           <entry key="XML" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="38" />
-          <entry key="gitignore" value="5" />
-          <entry key="java" value="338" />
+          <entry key="gitignore" value="4" />
+          <entry key="java" value="337" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="338" />
-          <entry key="PLAIN_TEXT" value="43" />
+          <entry key="JAVA" value="337" />
+          <entry key="PLAIN_TEXT" value="42" />
           <entry key="XML" value="4" />
         </counts>
       </usages-collector>
@@ -64,36 +71,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tech/bts/restaurant/MainApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="64" column="42" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+            <state relative-caret-position="990">
+              <caret line="66" column="48" lean-forward="true" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tech/bts/restaurant/model/Menu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#163#164#0" expanded="true" />
-                <element signature="e#218#219#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/tech/bts/restaurant/model/Order.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
-              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -177,9 +161,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="131" />
-    <option name="y" value="23" />
-    <option name="width" value="1309" />
+    <option name="y" value="29" />
+    <option name="width" value="1440" />
     <option name="height" value="849" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -273,14 +256,14 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557829563127" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557829197515" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -348,9 +331,7 @@
       <workItem from="1556293876932" duration="35000" />
       <workItem from="1556294606123" duration="856000" />
       <workItem from="1557106114963" duration="11000" />
-      <workItem from="1557826405736" duration="3159000" />
-      <workItem from="1557829806918" duration="54000" />
-      <workItem from="1557839518715" duration="6000" />
+      <workItem from="1557826405736" duration="2841000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1555604057194</created>
@@ -429,31 +410,16 @@
       <option name="project" value="LOCAL" />
       <updated>1557828307594</updated>
     </task>
-    <task id="LOCAL-00012" summary="Fix all methods in Sales Service">
-      <created>1557829304397</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1557829304397</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Fix all methods in Sales Service">
-      <created>1557829572084</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1557829572084</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50285000" />
+    <option name="totallyTimeSpent" value="49907000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="233" y="23" width="1309" height="849" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="29" width="1440" height="849" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32202053" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2832618" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -462,13 +428,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32833788" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5531335" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.1920981" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.49591282" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.38828337" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32561308" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3294964" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32561308" />
@@ -497,10 +463,16 @@
     <MESSAGE value="Fix methods" />
     <MESSAGE value="Fix writeCSV methods" />
     <MESSAGE value="Add BaseDish extends Dish" />
-    <MESSAGE value="Fix all methods in Sales Service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix all methods in Sales Service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add BaseDish extends Dish" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tech/bts/mobiledevjava/service/MenuService.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/tech/bts/mobiledevjava/MenuManagerShould.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/tech/bts/mobiledevjava/service/MenuManager.java" />
@@ -544,6 +516,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tech/bts/restaurant/model/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#163#164#0" expanded="true" />
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#526#536#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tech/bts/restaurant/model/Starter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -574,32 +559,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tech/bts/restaurant/MainApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="64" column="42" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tech/bts/restaurant/model/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#163#164#0" expanded="true" />
-            <element signature="e#218#219#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tech/bts/restaurant/model/Order.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -610,10 +573,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tech/bts/restaurant/MainApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        <state relative-caret-position="990">
+          <caret line="66" column="48" lean-forward="true" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
